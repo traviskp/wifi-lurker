@@ -30,6 +30,7 @@ echo -e " [+] Starting $scantime second scan"
 sleep 2
 
 # Run Airodump and output file
+# Assumes WiFI network on host to scan is "wlan0"
 xterm -T "WiFi Lurker: Scanning Networks" -e timeout $scantime airodump-ng --ignore-negative-one --band abg -w $filename --output-format csv wlan0 & sleep $scantime;
 kill $!
 
