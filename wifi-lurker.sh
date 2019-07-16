@@ -69,6 +69,8 @@ if [ $bssidcount -gt 0 ]; then
 	while IFS= read -r line
 	do
 		echo " $line" | tee -a wl-${filename}-ap.txt
+		
+		# Credit to https://miloserdov.org/?p=298 for the MAC strip / comparision
 
 		MAC="$(echo $line | sed 's/ //g' | sed 's/-//g' | sed 's/://g' | cut -c1-6)";
 		result="$(grep -i -A 4 ^$MAC ./oui.txt)";
@@ -113,6 +115,8 @@ kill $!
 
 	while IFS= read -r line ; do
 		echo " $line" | tee -a wl-$filename-clients.txt
+		
+		# Credit to https://miloserdov.org/?p=298 for the MAC strip / comparison
 
 		MAC="$(echo $line | sed 's/ //g' | sed 's/-//g' | sed 's/://g' | cut -c1-6)";
 		result="$(grep -i -A 4 ^$MAC ./oui.txt)";
