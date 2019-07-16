@@ -135,6 +135,7 @@ else
 	echo -e " [+] Increase scan time or try again\n"
 fi
 
+# Commented out for debugging purposes
 # Cleanup, remove uncessary files
 # rm wl_${filename}.txt
 #rm ${filename}-01.csv
