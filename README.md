@@ -1,5 +1,5 @@
 # wifi-lurker
-Scan access points / clients and resolve mac addresses
+Scan all access points / clients using airomon-ng and resolve mac addresses of ap / clients
 
 Assumes wlan0 on host to use for scanning. Modify this on line 34 if using different name.
 
